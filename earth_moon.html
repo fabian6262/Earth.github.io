@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            box-sizing:border-box;
+            background: url(spaces.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sun{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background: url(sun.png) center center / cover;
+            animation: sun-animation 5s infinite;
+
+        }
+        .earth{
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            background: url(earth.png) center center / cover;
+            animation: earth-animation 20s infinite;
+
+        }
+                                                                          
+        @keyframes sun-animation{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+
+        }
+        @keyframes earth-animation {
+            0% {
+                transform: rotate(0deg) translate(330px);
+    
+            }
+            100% {
+                transform: rotate(360deg) translate(330px);
+            }
+        }
+        @keyframes moon-animation{
+            0%{
+                transform: rotate(0deg) translate(88px);
+            }
+            100%{
+                transform: rotate(360deg) translate(88px);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sun">
+            <div class="earth">
+                <div class="moon"></div>
+            </div>
+        </div>
+        
+    </div>
+    
+</html>
